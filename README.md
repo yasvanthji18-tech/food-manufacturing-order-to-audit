@@ -101,7 +101,7 @@ See [DESIGN.md](DESIGN.md) for the entity model, ledger rules, costing logic and
 
 ## Recorded demo
 
-[Watch the 77-second H.264 MP4 benchmark walkthrough](DEMO.mp4). It shows the admin, production, salesman and auditor roles, including GST invoicing, the stock shortage, payment, and activity log. A WebM copy is also included as `DEMO.webm`.
+[Play the 77-second demo in browser](https://yasvanthji18-tech.github.io/food-manufacturing-order-to-audit/) or [download the H.264 MP4](DEMO.mp4). It shows the admin, production, salesman and auditor roles, including GST invoicing, the stock shortage, payment, and activity log. A WebM copy is also included as `DEMO.webm`.
 
 ## Limits and production hardening
 

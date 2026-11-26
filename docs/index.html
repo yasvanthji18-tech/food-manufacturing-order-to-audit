@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d35">
+  <title>Order to Audit · Recorded Demo</title>
+  <style>
+    :root{color-scheme:light;--ink:#16352f;--muted:#61736d;--green:#155e4b;--line:#dce8e2;--paper:#f5f8f6}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{width:min(1040px,calc(100% - 32px));margin:42px auto 64px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:44px}
+    .brand{font-weight:750;letter-spacing:.02em}.brand small{display:block;color:var(--muted);font-size:.78rem;font-weight:500}.link{color:var(--green);font-weight:650;text-decoration:none}.link:hover{text-decoration:underline}
+    .eyebrow{color:var(--green);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.hero{max-width:760px;margin-bottom:24px}
+    h1{font-size:clamp(2.1rem,5vw,3.35rem);line-height:1.08;letter-spacing:-.035em;margin:10px 0 14px}.intro{font-size:1.08rem;color:var(--muted);margin:0}
+    .player{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0b201c;box-shadow:0 18px 48px #173b2a1c}
+    video{display:block;width:100%;height:auto;aspect-ratio:1364/850;background:#0b201c}
+    .meta{display:flex;flex-wrap:wrap;gap:10px 24px;padding:14px 18px;background:white;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+    .section{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:20px 22px}.card h2{font-size:1rem;margin:0 0 10px}.card ol{margin:0;padding-left:20px;color:var(--muted)}.card li+li{margin-top:4px}
+    footer{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+    @media(max-width:650px){main{margin-top:24px}.top{margin-bottom:34px}.section{grid-template-columns:1fr}.meta{display:block}.meta span{display:block;margin:3px 0}}
+  </style>
+</head>
+<body>
+  <main>
+    <header class="top">
+      <div class="brand">Sample Foods<small>Order to Audit</small></div>
+      <a class="link" href="https://github.com/yasvanthji18-tech/food-manufacturing-order-to-audit">View source on GitHub ↗</a>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Recorded benchmark walkthrough</div>
+      <h1>From field order to audit trail.</h1>
+      <p class="intro">A 77-second walkthrough of role-based sales, production, inventory, GST invoicing, collections and audit reports.</p>
+    </section>
+    <section class="player" aria-label="Recorded application demo">
+      <video controls playsinline preload="metadata">
+        <source src="DEMO.mp4" type="video/mp4">
+        Your browser cannot play this MP4. <a href="DEMO.mp4">Download the demo video</a>.
+      </video>
+      <div class="meta"><span>Duration: 1:17</span><span>H.264 MP4 · 0.8 MB</span><span>Benchmark: Murukku 200 g</span></div>
+    </section>
+    <section class="section">
+      <article class="card">
+        <h2>Workflow shown</h2>
+        <ol><li>Flour receipt and production run</li><li>Salesman A order, GST invoice and dispatch</li><li>Salesman B shortage and admin collection</li><li>Auditor reports and activity log</li></ol>
+      </article>
+      <article class="card">
+        <h2>Benchmark results</h2>
+        <ol><li>Production cost: ₹5,855</li><li>Invoice: ₹7,500 taxable + ₹375 GST</li><li>Collection: ₹4,000; balance: ₹3,875</li><li>Distributor shortage: 32 packets</li></ol>
+      </article>
+    </section>
+    <footer>Source code, setup instructions and the original WebM recording are available in the <a class="link" href="https://github.com/yasvanthji18-tech/food-manufacturing-order-to-audit">public repository</a>.</footer>
+  </main>
+</body>
+</html>

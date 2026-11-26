@@ -43,7 +43,6 @@ const orderColumns=DB.prepare('PRAGMA table_info(orders)').all().map(c=>c.name);
 if(!orderColumns.includes('client_key'))DB.exec('ALTER TABLE orders ADD COLUMN client_key TEXT');
 const itemColumns=DB.prepare('PRAGMA table_info(items)').all().map(c=>c.name);
 if(!itemColumns.includes('pack_size_milli'))DB.exec('ALTER TABLE items ADD COLUMN pack_size_milli INTEGER NOT NULL DEFAULT 0');
-run("UPDATE items SET pack_size_milli=20000 WHERE sku='FG-MUR-200' AND kind='finished' AND pack_size_milli=0");
 const lineColumns=DB.prepare('PRAGMA table_info(order_lines)').all().map(c=>c.name);
 if(!lineColumns.includes('entered_qty_milli'))DB.exec('ALTER TABLE order_lines ADD COLUMN entered_qty_milli INTEGER NOT NULL DEFAULT 0');
 if(!lineColumns.includes('entered_unit'))DB.exec("ALTER TABLE order_lines ADD COLUMN entered_unit TEXT NOT NULL DEFAULT ''");
@@ -51,6 +50,7 @@ if(!lineColumns.includes('entered_unit'))DB.exec("ALTER TABLE order_lines ADD CO
 const q = (sql, ...args) => DB.prepare(sql).get(...args);
 const all = (sql, ...args) => DB.prepare(sql).all(...args);
 const run = (sql, ...args) => DB.prepare(sql).run(...args);
+run("UPDATE items SET pack_size_milli=20000 WHERE sku='FG-MUR-200' AND kind='finished' AND pack_size_milli=0");
 const tx = (fn) => { DB.exec('BEGIN IMMEDIATE'); try { const result=fn(); DB.exec('COMMIT'); return result; } catch(e) { DB.exec('ROLLBACK'); throw e; } };
 const paise = (x) => { const n=Number(x); if(!Number.isFinite(n)) throw new Error('Enter a valid amount'); return Math.round(n*100); };
 const milli = (x) => { const n=Number(x); if(!Number.isFinite(n)||n<0) throw new Error('Enter a valid non-negative quantity'); return Math.round(n*1000); };

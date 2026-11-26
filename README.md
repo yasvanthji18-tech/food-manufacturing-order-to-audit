@@ -14,7 +14,7 @@ From this folder:
 npm start
 ```
 
-Then open <http://127.0.0.1:3000>. The first start creates `data.sqlite` and seeds the benchmark users, customers, product, recipe, opening balances and stock ledger. To create the initial database without starting the web server, run `npm run seed`.
+Then open <http://127.0.0.1:45671>. The first start creates `data.sqlite` and seeds the benchmark users, customers, product, recipe, opening balances and stock ledger. To create the initial database without starting the web server, run `npm run seed`.
 
 To restart the demo from the beginning, stop the server and remove `data.sqlite`, `data.sqlite-shm` and `data.sqlite-wal` from this project folder; the next start re-seeds opening data. The active database is intentionally ignored by Git.
 

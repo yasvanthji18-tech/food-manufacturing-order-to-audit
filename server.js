@@ -7,7 +7,7 @@ import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
 
 const ROOT = fileURLToPath(new URL('.', import.meta.url));
 const PUBLIC = join(ROOT, 'public');
-const PORT = Number(process.env.PORT || 3000);
+const PORT = Number(process.env.PORT || 45671);
 const DB = new DatabaseSync(process.env.DATABASE_PATH || join(ROOT, 'data.sqlite'));
 DB.exec('PRAGMA foreign_keys=ON; PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;');
 const sessions = new Map();

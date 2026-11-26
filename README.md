@@ -99,6 +99,10 @@ The client is dependency-free JavaScript and CSS. The local app binds to `127.0.
 
 See [DESIGN.md](DESIGN.md) for the entity model, ledger rules, costing logic and transaction sequence. See [DEMO.md](DEMO.md) for a timed walkthrough outline.
 
+## Recorded demo
+
+[Watch the 77-second benchmark walkthrough](DEMO.webm). It shows the admin, production, salesman and auditor roles, including GST invoicing, the stock shortage, payment, and activity log.
+
 ## Limits and production hardening
 
 - This is a complete local prototype, not a hosted, production-hardened service. Before exposing it to a network, add HTTPS, a durable session store, session revocation, backups, monitoring, rate limiting, database migration tooling, deployment secrets, account recovery and security review.

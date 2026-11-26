@@ -1,0 +1,9 @@
+{
+  "name": "food-manufacturing-order-to-audit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ledger-based order, production, inventory, costing and audit application for a small snack manufacturer",
+  "type": "module",
+  "scripts": { "start": "node server.js", "seed": "node server.js --seed-only" },
+  "engines": { "node": ">=22.5" }
+}
